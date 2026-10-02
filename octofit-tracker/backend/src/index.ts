@@ -16,7 +16,7 @@ app.get('/api/config', (_request, response) => {
   response.json({ apiBaseUrl });
 });
 
-app.use('/api', apiRouter);
+app.use(apiRouter);
 
 async function startServer() {
   await connectDatabase();
